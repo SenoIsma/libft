@@ -6,7 +6,7 @@
 /*   By: ibouhlel <ibouhlel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 18:36:52 by ibouhlel          #+#    #+#             */
-/*   Updated: 2024/05/23 15:11:05 by ibouhlel         ###   ########.fr       */
+/*   Updated: 2024/05/24 12:58:49 by ibouhlel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	count_words(char const *s, char c)
 		{
 			count++;
 			while (s[i] != c && s[i] != '\0')
-			i++;
+				i++;
 		}
 		else
 			i++;
@@ -91,12 +91,8 @@ static char	**fill_strs(char const *s, char c, char **strs)
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
 	char	**strs;
 
-	i = 0;
-	j = 0;
 	if (!s)
 		return (NULL);
 	strs = malloc(sizeof(char *) * (count_words(s, c) + 1));
